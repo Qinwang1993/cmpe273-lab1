@@ -1,4 +1,5 @@
-sh-3.2$ time python3 async_ext_merge_sort.py
+wangqindeMacBook-Pro:lab1 wangqin$ time python3 async_ext_merge_sort.py
+
 real    0m0.097s
 user    0m0.073s
 sys     0m0.018s
