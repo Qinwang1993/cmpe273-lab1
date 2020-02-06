@@ -7,13 +7,12 @@ K = TOTAL_NUM//NUM
 MAX = sys.maxsize
 # dataArry : minimum num of each files
 dataArry = [0 for i in range(0,K)]
-# initialize loserTree
+# initialize loserTreec
 loserTree = [-1 for i in range(0,K)]
 sortedFile = [0 for i in range(0,K)]
 q = queue.Queue()
 # output sorted data
 output = open("output/sorted.txt","w")
-
 
 async def sortInputFile(j):
     list = [0 for i in range(0,NUM)]
@@ -99,6 +98,7 @@ loop.run_until_complete(asyncio.wait(tasks))
 for i in range(0,K):
     sortedFile[i] = open("temp/sorted_%s.txt"%(i+1),"r") 
     dataArry[i] = int(sortedFile[i].readline().rstrip())  
+
 # create Loser Tree
 createLoserTree()
 # output sorted data
